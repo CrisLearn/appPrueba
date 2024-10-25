@@ -19,7 +19,7 @@ const Tab4: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 4</IonTitle>
+          <IonTitle>Guardar un texto a archivo</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
