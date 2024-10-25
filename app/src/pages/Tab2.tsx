@@ -8,7 +8,7 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Repositorio de GitGub</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -17,7 +17,7 @@ const Tab2: React.FC = () => {
         </div>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Repositorio de GitGub</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Para Ingresar al Repositorio ingresar al siguiente enlace:" />

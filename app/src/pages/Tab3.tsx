@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonDatetime, IonButton, IonText } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonDatetime, IonButton, IonText, IonCol, IonRow } from '@ionic/react';
 import React, { useState } from 'react';
 import './Tab3.css';
 
@@ -21,7 +21,7 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
+          <IonTitle>Días de Diferencia</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -31,21 +31,26 @@ const Tab3: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <div className="date-picker-container">
+          <IonRow>
           <IonItem>
+            <IonCol size="12">
             <IonLabel>Fecha de inicio</IonLabel>
             <IonDatetime
               presentation='date'
               value={startDate}
               onIonChange={(e) => setStartDate(e.detail.value?.toString() || '')}
             />
+            </IonCol>
           </IonItem>
           <IonItem>
+            <IonCol size="12">
             <IonLabel>Fecha de fin</IonLabel>
             <IonDatetime
               presentation='date'
               value={endDate}
               onIonChange={(e) => setEndDate(e.detail.value?.toString() || '')}
             />
+            </IonCol>
           </IonItem>
           <IonButton expand="full" onClick={calculateDaysDifference}>
             Calcular diferencia en días
@@ -55,6 +60,8 @@ const Tab3: React.FC = () => {
               Diferencia en días: {daysDifference} días
             </IonText>
           )}
+          </IonRow>
+          
         </div>
       </IonContent>
     </IonPage>
