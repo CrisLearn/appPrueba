@@ -1,8 +1,20 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonInput, IonItem, IonLabel } from '@ionic/react';
+import React, { useState } from 'react';
 import './Tab4.css';
 
 const Tab4: React.FC = () => {
+  const [text, setText] = useState('');
+
+  const saveTextToFile = () => {
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'texto.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +28,19 @@ const Tab4: React.FC = () => {
             <IonTitle size="large">Tab 4</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 4 page" />
+        <div className="input-container">
+          <IonItem>
+            <IonLabel position="floating">Escribe tu texto</IonLabel>
+            <IonInput
+              value={text}
+              onIonChange={(e) => setText(e.detail.value!)}
+              placeholder="Ingresa algo..."
+            />
+          </IonItem>
+          <IonButton expand="full" onClick={saveTextToFile}>
+            Guardar en archivo
+          </IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
