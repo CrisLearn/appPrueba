@@ -3,6 +3,7 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
+  const profilePicture = "/imagenes/imgperfil.jpg";
   return (
     <IonPage>
       <IonHeader>
@@ -11,12 +12,15 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
+        <div className="image-container">
+          <img src={profilePicture} alt="Foto de perfil" className="profile-image" />
+        </div>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <ExploreContainer name="Para Ingresar al Repositorio ingresar al siguiente enlace:" />
       </IonContent>
     </IonPage>
   );
