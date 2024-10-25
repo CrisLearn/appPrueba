@@ -1,5 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonAvatar, IonGrid, IonRow, IonCol, IonCard, IonCardContent, IonIcon, IonList, IonChip } from '@ionic/react';
-import { mailOutline, callOutline, locationOutline, briefcaseOutline, schoolOutline } from 'ionicons/icons';
+import { mailOutline, callOutline, locationOutline, briefcaseOutline, schoolOutline, americanFootball, footballOutline, gameController, film } from 'ionicons/icons';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -10,7 +10,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Curriculum Vitae</IonTitle>
+          <IonTitle>Biografía Personal</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -23,12 +23,21 @@ const Tab1: React.FC = () => {
               </IonAvatar>
             </IonCol>
             {/* Información personal */}
-            <IonCol size="8">
+            <IonCol size="4">
               <IonItem lines="none">
                 <IonLabel>
-                  <h2><strong>Cristian Ermel Usiña Chulde</strong></h2>
-                  <p>Tecnólogo Superior en Desarrollo de Software</p>
+                  <h2><strong>Información Personal</strong></h2>
+                  <p>Nombre</p><h2><strong>Cristian Ermel Usiña Chulde</strong></h2>
+                  <p>Fehca de Nacimiento</p><h2><strong>24 - 05 - 2000</strong></h2>
+                  <p>Edad</p><h2><strong>24 años</strong></h2>
+                  <p>Lugar de Nacimineto</p><h2><strong>Cristóbal Colón Carhi-Ecuador</strong></h2>
+                  <p>Lugar de Residencia</p><h2><strong>Cotocollao Quito-Ecuador</strong></h2>
                 </IonLabel>
+              </IonItem>
+            </IonCol>
+            <IonCol size="4">
+              <IonItem lines="none">
+              <IonLabel><h2><strong>Información de Contacto</strong></h2></IonLabel>
               </IonItem>
               <IonItem lines="none">
                 <IonIcon icon={mailOutline} slot="start" />
@@ -44,36 +53,10 @@ const Tab1: React.FC = () => {
               </IonItem>
             </IonCol>
           </IonRow>
+          
+          
 
-          {/* Experiencia Profesional */}
-          <IonRow>
-            <IonCol>
-              <IonCard>
-                <IonCardContent>
-                  <IonItem lines="none">
-                    <IonIcon icon={briefcaseOutline} slot="start" />
-                    <IonLabel><h3>Experiencia Profesional</h3></IonLabel>
-                  </IonItem>
-                  <IonList>
-                    <IonItem lines="none">
-                      <IonLabel>
-                        <h4>Desarrollador Junior</h4>
-                        <p>Compañía CVP (2021 - Presente)</p>
-                        <p>Responsable del desarrollo de aplicaciones web y sistemas</p>
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none">
-                      <IonLabel>
-                        <h4>Sistemas de la Información</h4>
-                        <p>Manta Hills S.C.C. (2022 - Presente)</p>
-                        <p>Control de inventario electrónico</p>
-                      </IonLabel>
-                    </IonItem>
-                  </IonList>
-                </IonCardContent>
-              </IonCard>
-            </IonCol>
-          </IonRow>
+         
 
           {/* Educación */}
           <IonRow>
@@ -100,6 +83,69 @@ const Tab1: React.FC = () => {
                       </IonLabel>
                     </IonItem>
                   </IonList>
+                  <IonList>
+                    <IonItem lines="none">
+                      <IonLabel>
+                        <h4>Educación Básica</h4>
+                        <p>Escuela Fiscal Mixta "Galo Plaza Lasoo" (2006 - 2012)</p>
+                      </IonLabel>
+                    </IonItem>
+                  </IonList>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+
+           {/* Experiencia Profesional */}
+           <IonRow>
+            <IonCol>
+              <IonCard>
+                <IonCardContent>
+                  <IonItem lines="none">
+                    <IonIcon icon={briefcaseOutline} slot="start" />
+                    <IonLabel><h3>Informacion Profesional</h3></IonLabel>
+                  </IonItem>
+                  <IonList>
+                    <IonItem lines="none">
+                      <IonLabel>
+                        <h4>Desarrollador Junior</h4>
+                        <p>Compañía CVP (2021 - Presente)</p>
+                        <p>Responsable del desarrollo de aplicaciones web y sistemas</p>
+                      </IonLabel>
+                    </IonItem>
+                    <IonItem lines="none">
+                      <IonLabel>
+                        <h4>Sistemas de la Información</h4>
+                        <p>Manta Hills S.C.C. (2022 - Presente)</p>
+                        <p>Control de inventario electrónico</p>
+                      </IonLabel>
+                    </IonItem>
+                  </IonList>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+           {/* Experiencia Profesional */}
+           <IonRow>
+            <IonCol>
+              <IonCard>
+                <IonCardContent>
+                  <IonItem lines="none">
+                    <IonIcon icon={americanFootball} slot="start" />
+                    <IonLabel><h3>Hobbies</h3></IonLabel>
+                  </IonItem>
+                  <IonItem lines="none">
+                <IonIcon icon={footballOutline} slot="start" />
+                <IonLabel>Fútbol</IonLabel>
+              </IonItem>
+              <IonItem lines="none">
+                <IonIcon icon={gameController} slot="start" />
+                <IonLabel>VideoJuegos</IonLabel>
+              </IonItem>
+              <IonItem lines="none">
+                <IonIcon icon={film} slot="start" />
+                <IonLabel>Películas</IonLabel>
+              </IonItem>
                 </IonCardContent>
               </IonCard>
             </IonCol>
@@ -110,7 +156,7 @@ const Tab1: React.FC = () => {
             <IonCol>
               <IonCard>
                 <IonCardContent>
-                  <IonLabel><h3>Habilidades</h3></IonLabel>
+                  <IonLabel><h3>Habilidades de Software</h3></IonLabel>
                   <IonChip color="primary">
                     <IonLabel>JavaScript</IonLabel>
                   </IonChip>
