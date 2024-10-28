@@ -1,10 +1,36 @@
+/* Center and style the date-picker container */
 .date-picker-container {
-    padding: 16px;
+  padding: 20px;
+}
+
+/* Adjust IonItem and IonLabel for better spacing */
+ion-item {
+  margin-top: 15px;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.result-text {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+  .date-picker-container {
+    padding: 30px;
   }
-  
+}
+
+@media (min-width: 768px) {
+  .date-picker-container {
+    padding: 40px;
+  }
   .result-text {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.4em;
   }
-  
+}

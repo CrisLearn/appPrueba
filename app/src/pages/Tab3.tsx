@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonDatetime, IonButton, IonText, IonCol, IonRow } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonDatetime, IonButton, IonText, IonCol, IonRow, IonGrid } from '@ionic/react';
 import React, { useState } from 'react';
 import './Tab3.css';
 
@@ -27,42 +27,52 @@ const Tab3: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
+            <IonTitle size="large">Días de Diferencia</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <div className="date-picker-container">
+
+        <IonGrid className="date-picker-container">
           <IonRow>
-          <IonItem>
-            <IonCol size="12">
-            <IonLabel>Fecha de inicio</IonLabel>
-            <IonDatetime
-              presentation='date'
-              value={startDate}
-              onIonChange={(e) => setStartDate(e.detail.value?.toString() || '')}
-            />
+            <IonCol size="12" sizeMd="6">
+              <IonItem>
+                <IonLabel position="stacked">Fecha de inicio</IonLabel>
+                <IonDatetime
+                  presentation="date"
+                  value={startDate}
+                  onIonChange={(e) => setStartDate(e.detail.value?.toString() || '')}
+                />
+              </IonItem>
             </IonCol>
-          </IonItem>
-          <IonItem>
-            <IonCol size="12">
-            <IonLabel>Fecha de fin</IonLabel>
-            <IonDatetime
-              presentation='date'
-              value={endDate}
-              onIonChange={(e) => setEndDate(e.detail.value?.toString() || '')}
-            />
+            <IonCol size="12" sizeMd="6">
+              <IonItem>
+                <IonLabel position="stacked">Fecha de fin</IonLabel>
+                <IonDatetime
+                  presentation="date"
+                  value={endDate}
+                  onIonChange={(e) => setEndDate(e.detail.value?.toString() || '')}
+                />
+              </IonItem>
             </IonCol>
-          </IonItem>
-          <IonButton expand="full" onClick={calculateDaysDifference}>
-            Calcular diferencia en días
-          </IonButton>
-          {daysDifference !== null && (
-            <IonText className="result-text">
-              Diferencia en días: {daysDifference} días
-            </IonText>
-          )}
           </IonRow>
-          
-        </div>
+
+          <IonRow>
+            <IonCol size="12">
+              <IonButton expand="full" onClick={calculateDaysDifference}>
+                Calcular diferencia en días
+              </IonButton>
+            </IonCol>
+          </IonRow>
+
+          {daysDifference !== null && (
+            <IonRow>
+              <IonCol size="12">
+                <IonText className="result-text">
+                  Diferencia en días: <strong>{daysDifference}</strong> días
+                </IonText>
+              </IonCol>
+            </IonRow>
+          )}
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

@@ -4,23 +4,24 @@ import './Tab2.css';
 
 const Tab2: React.FC = () => {
   const profilePicture = "/imagenes/imgperfil.jpg";
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Repositorio de GitGub</IonTitle>
+          <IonTitle>Repositorio de GitHub</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <div className="image-container">
-          <img src={profilePicture} alt="Foto de perfil" className="profile-image" />
+          <img src={profilePicture} alt="Foto de perfil" />
         </div>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Repositorio de GitGub</IonTitle>
+            <IonTitle size="large">Repositorio de GitHub</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Para Ingresar al Repositorio ingresar al siguiente enlace:" />
+        <ExploreContainer name="Para ingresar al repositorio, ingresa al siguiente enlace:" />
       </IonContent>
     </IonPage>
   );

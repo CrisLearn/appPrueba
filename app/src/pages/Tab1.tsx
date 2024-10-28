@@ -3,8 +3,7 @@ import { mailOutline, callOutline, locationOutline, briefcaseOutline, schoolOutl
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
-  // Ruta de la imagen almacenada en el directorio 'public'
-  const profilePicture = "/imagenes/imgperfil.jpg"; // Ruta relativa a 'public', sin necesidad de usar .env
+  const profilePicture = "/imagenes/imgperfil.jpg";
 
   return (
     <IonPage>
@@ -16,28 +15,26 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen>
         <IonGrid>
           <IonRow>
-            {/* Foto de Perfil */}
-            <IonCol size="4">
+            <IonCol size="12" sizeMd="4" className="avatar-col">
               <IonAvatar className="avatar">
                 <img src={profilePicture} alt="Foto de perfil" />
               </IonAvatar>
             </IonCol>
-            {/* Información personal */}
-            <IonCol size="4">
+            <IonCol size="12" sizeMd="4">
               <IonItem lines="none">
                 <IonLabel>
                   <h2><strong>Información Personal</strong></h2>
                   <p>Nombre</p><h2><strong>Cristian Ermel Usiña Chulde</strong></h2>
-                  <p>Fehca de Nacimiento</p><h2><strong>24 - 05 - 2000</strong></h2>
+                  <p>Fecha de Nacimiento</p><h2><strong>24 - 05 - 2000</strong></h2>
                   <p>Edad</p><h2><strong>24 años</strong></h2>
-                  <p>Lugar de Nacimineto</p><h2><strong>Cristóbal Colón Carhi-Ecuador</strong></h2>
+                  <p>Lugar de Nacimiento</p><h2><strong>Cristóbal Colón Carhi-Ecuador</strong></h2>
                   <p>Lugar de Residencia</p><h2><strong>Cotocollao Quito-Ecuador</strong></h2>
                 </IonLabel>
               </IonItem>
             </IonCol>
-            <IonCol size="4">
+            <IonCol size="12" sizeMd="4">
               <IonItem lines="none">
-              <IonLabel><h2><strong>Información de Contacto</strong></h2></IonLabel>
+                <IonLabel><h2><strong>Información de Contacto</strong></h2></IonLabel>
               </IonItem>
               <IonItem lines="none">
                 <IonIcon icon={mailOutline} slot="start" />
@@ -53,14 +50,10 @@ const Tab1: React.FC = () => {
               </IonItem>
             </IonCol>
           </IonRow>
-          
-          
-
-         
 
           {/* Educación */}
           <IonRow>
-            <IonCol>
+            <IonCol size="12">
               <IonCard>
                 <IonCardContent>
                   <IonItem lines="none">
@@ -71,19 +64,15 @@ const Tab1: React.FC = () => {
                     <IonItem lines="none">
                       <IonLabel>
                         <h4>Tecnología Superior en Desarrollo de Software</h4>
-                        <p>Escuela Politéctica Nacional (2022 - Presente)</p>
+                        <p>Escuela Politécnica Nacional (2022 - Presente)</p>
                       </IonLabel>
                     </IonItem>
-                  </IonList>
-                  <IonList>
                     <IonItem lines="none">
                       <IonLabel>
                         <h4>Bachiller Técnico Automotriz</h4>
                         <p>Institución Educativa Central Técnico (2012 - 2018)</p>
                       </IonLabel>
                     </IonItem>
-                  </IonList>
-                  <IonList>
                     <IonItem lines="none">
                       <IonLabel>
                         <h4>Educación Básica</h4>
@@ -96,14 +85,14 @@ const Tab1: React.FC = () => {
             </IonCol>
           </IonRow>
 
-           {/* Experiencia Profesional */}
-           <IonRow>
-            <IonCol>
+          {/* Experiencia Profesional */}
+          <IonRow>
+            <IonCol size="12">
               <IonCard>
                 <IonCardContent>
                   <IonItem lines="none">
                     <IonIcon icon={briefcaseOutline} slot="start" />
-                    <IonLabel><h3>Informacion Profesional</h3></IonLabel>
+                    <IonLabel><h3>Información Profesional</h3></IonLabel>
                   </IonItem>
                   <IonList>
                     <IonItem lines="none">
@@ -125,9 +114,10 @@ const Tab1: React.FC = () => {
               </IonCard>
             </IonCol>
           </IonRow>
-           {/* Experiencia Profesional */}
-           <IonRow>
-            <IonCol>
+
+          {/* Hobbies */}
+          <IonRow>
+            <IonCol size="12">
               <IonCard>
                 <IonCardContent>
                   <IonItem lines="none">
@@ -135,17 +125,17 @@ const Tab1: React.FC = () => {
                     <IonLabel><h3>Hobbies</h3></IonLabel>
                   </IonItem>
                   <IonItem lines="none">
-                <IonIcon icon={footballOutline} slot="start" />
-                <IonLabel>Fútbol</IonLabel>
-              </IonItem>
-              <IonItem lines="none">
-                <IonIcon icon={gameController} slot="start" />
-                <IonLabel>VideoJuegos</IonLabel>
-              </IonItem>
-              <IonItem lines="none">
-                <IonIcon icon={film} slot="start" />
-                <IonLabel>Películas</IonLabel>
-              </IonItem>
+                    <IonIcon icon={footballOutline} slot="start" />
+                    <IonLabel>Fútbol</IonLabel>
+                  </IonItem>
+                  <IonItem lines="none">
+                    <IonIcon icon={gameController} slot="start" />
+                    <IonLabel>VideoJuegos</IonLabel>
+                  </IonItem>
+                  <IonItem lines="none">
+                    <IonIcon icon={film} slot="start" />
+                    <IonLabel>Películas</IonLabel>
+                  </IonItem>
                 </IonCardContent>
               </IonCard>
             </IonCol>
@@ -153,7 +143,7 @@ const Tab1: React.FC = () => {
 
           {/* Habilidades */}
           <IonRow>
-            <IonCol>
+            <IonCol size="12">
               <IonCard>
                 <IonCardContent>
                   <IonLabel><h3>Habilidades de Software</h3></IonLabel>

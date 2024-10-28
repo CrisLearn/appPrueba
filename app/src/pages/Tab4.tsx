@@ -1,18 +1,24 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonInput, IonItem, IonLabel } from '@ionic/react';
 import React, { useState } from 'react';
+import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 import './Tab4.css';
 
 const Tab4: React.FC = () => {
   const [text, setText] = useState('');
 
-  const saveTextToFile = () => {
-    const blob = new Blob([text], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'texto.txt';
-    a.click();
-    URL.revokeObjectURL(url);
+  const saveTextToFile = async () => {
+    try {
+      await Filesystem.writeFile({
+        path: 'texto.txt',
+        data: text,
+        directory: Directory.Documents,
+        encoding: Encoding.UTF8,
+      });
+      alert('Archivo guardado correctamente en el dispositivo');
+    } catch (error) {
+      console.error('Error al guardar el archivo:', error);
+      alert('No se pudo guardar el archivo');
+    }
   };
 
   return (
